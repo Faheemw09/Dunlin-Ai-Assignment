@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+  font-size: 1rem;
+  line-height: 1;
+  height: 3rem;
+  padding: 0.2rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 400;
+  background-color: #9800ed;
+  color: #ffffff;
+  border-color: #000;
+  transition:
+    transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: -0.2em 0.2em #000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.btn:hover {
+  box-shadow: -0.1em 0.1em #000;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.btn:active {
+  font-weight: 400;
+  outline: 4px solid #fff4c7 !important;
+  outline-offset: 2px !important;
+}
+.btn:disabled {
+  background-color: #e7e7e7;
+  color: #130202;
+  border-color: #000;
+  transition:
+    transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: -0.1em 0.1em #000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.headerLine {
+  border-bottom: 2px solid #9800ed;
+  margin-bottom: 1rem;
+}
