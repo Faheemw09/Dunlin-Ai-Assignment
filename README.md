@@ -39,7 +39,9 @@ Keywords: Displays the extracted keywords.
 Sentiments: Shows the sentiment score and magnitude.
 Topic Information: Provides topic classification and confidence levels.
 Uploading Files
- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJsKZVppBhshJBN6_RHp9luylwz4eQO4I8Tg&usqp=CAU" width="450" height="300"/>
+
+![Image](./ReadmeImages/topss.png)
+
 # Supported Formats
 The application supports uploading the following file formats:
 
@@ -50,10 +52,10 @@ Steps to Upload
 Click the upload area or drag and drop a file.
 Select a file from your device.
 Click the "Upload and Summarize" button to start the analysis.
-Example Screenshots
-Upload Area:
-File Selection:
-Upload Button:
+
+
+![Image](./ReadmeImages/fullss.png)
+
 # Folder Structure
 src/components: Contains reusable UI components like Tabs and Button.
 src/pages: Contains the main page components like HomePage.
