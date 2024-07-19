@@ -31,10 +31,14 @@ npm run dev
 Open your browser and navigate to http://localhost:3000.
 
 # Usage
-On the homepage, click the upload area or drag and drop a file to upload.
+On the homepage, click the upload area or drag and drop a file to upload
+
 Select a plain text, HTML, or DOCX file.
+
 Click the "Upload and Summarize" button to start the analysis.
+
 Once the analysis is complete, view the results in the respective tabs:
+
 Keywords: Displays the extracted keywords.
 Sentiments: Shows the sentiment score and magnitude.
 Topic Information: Provides topic classification and confidence levels.
