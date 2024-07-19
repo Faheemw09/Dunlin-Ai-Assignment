@@ -42,7 +42,7 @@ const HomePage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/analyze",
+        "https://dunlin-backend.onrender.com/api/analyze",
         formData,
         {
           headers: {
@@ -116,68 +116,68 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      {entities  && (
-      <div className="flex items-center justify-center m-auto">
-        {/* <Input /> */}
-        <Tabs defaultValue="keywords" className="w-[400px]">
-          <TabsList>
-            <TabsTrigger value="keywords">Keywords</TabsTrigger>
-            <TabsTrigger value="sentiments">Sentiments</TabsTrigger>
-            <TabsTrigger value="topic">Topic Information</TabsTrigger>
-          </TabsList>
+      {entities && (
+        <div className="flex items-center justify-center m-auto">
+          {/* <Input /> */}
+          <Tabs defaultValue="keywords" className="w-[400px]">
+            <TabsList>
+              <TabsTrigger value="keywords">Keywords</TabsTrigger>
+              <TabsTrigger value="sentiments">Sentiments</TabsTrigger>
+              <TabsTrigger value="topic">Topic Information</TabsTrigger>
+            </TabsList>
 
-          <TabsContent value="sentiments">
             <TabsContent value="sentiments">
               <TabsContent value="sentiments">
-                {entities?.sentiment && (
-                  <div className="p-4 bg-gray-100 rounded-lg">
-                    <div className="mb-2">
-                      <span className="font-bold text-blue-600">
-                        Magnitude:
-                      </span>
-                      <span className="ml-2 text-gray-700">
-                        {entities.sentiment.magnitude}
-                      </span>
+                <TabsContent value="sentiments">
+                  {entities?.sentiment && (
+                    <div className="p-4 bg-gray-100 rounded-lg">
+                      <div className="mb-2">
+                        <span className="font-bold text-blue-600">
+                          Magnitude:
+                        </span>
+                        <span className="ml-2 text-gray-700">
+                          {entities.sentiment.magnitude}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-green-600">Score:</span>
+                        <span className="ml-2 text-gray-700">
+                          {entities.sentiment.score.toFixed(2)}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="font-bold text-green-600">Score:</span>
-                      <span className="ml-2 text-gray-700">
-                        {entities.sentiment.score.toFixed(2)}
-                      </span>
-                    </div>
-                  </div>
-                )}
+                  )}
+                </TabsContent>
               </TabsContent>
             </TabsContent>
-          </TabsContent>
-          <TabsContent value="topic">
-            <div>
-              {entities?.classifications?.map((ele, index) => (
-                <div key={index} className="mb-4">
-                  <div className="bg-gray-100 border border-gray-300 rounded-sm p-2 text-sm">
-                    Name: {ele?.name}
+            <TabsContent value="topic">
+              <div>
+                {entities?.classifications?.map((ele, index) => (
+                  <div key={index} className="mb-4">
+                    <div className="bg-gray-100 border border-gray-300 rounded-sm p-2 text-sm">
+                      Name: {ele?.name}
+                    </div>
+                    <div className="mt-2 text-gray-600">
+                      Confidence: {ele?.confidence.toFixed(3)}
+                    </div>
                   </div>
-                  <div className="mt-2 text-gray-600">
-                    Confidence: {ele?.confidence.toFixed(3)}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
+                ))}
+              </div>
+            </TabsContent>
 
-          <TabsContent value="keywords">
-            <div className="flex flex-wrap  -mx-2 border border-gray-300 rounded-lg p-4 gap-3">
-              {entities?.keywords?.map((ele, index) => (
-                // <div key={index} className="w-1/5 px-2 mb-4 ">
-                <div className="bg-gray-100 border   border-gray-300 rounded-sm p-2 text-sm">
-                  {ele}
-                </div>
-                // </div>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
+            <TabsContent value="keywords">
+              <div className="flex flex-wrap  -mx-2 border border-gray-300 rounded-lg p-4 gap-3">
+                {entities?.keywords?.map((ele, index) => (
+                  // <div key={index} className="w-1/5 px-2 mb-4 ">
+                  <div className="bg-gray-100 border   border-gray-300 rounded-sm p-2 text-sm">
+                    {ele}
+                  </div>
+                  // </div>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
       )}
     </>
   );
