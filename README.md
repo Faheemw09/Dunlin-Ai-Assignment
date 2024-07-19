@@ -1,6 +1,5 @@
 
 
-
 # AI-Powered Content Summarization and Analysis Tool
 This application allows users to upload text content (articles, documents, emails, etc.) and receive a summarized version with key insights and analysis. The application leverages AI services to analyze the text, providing sentiment analysis, entity analysis, and topic classification.
 
