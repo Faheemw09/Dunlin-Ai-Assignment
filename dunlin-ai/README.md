@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
 
-```bash
+# AI-Powered Content Summarization and Analysis Tool
+This application allows users to upload text content (articles, documents, emails, etc.) and receive a summarized version with key insights and analysis. The application leverages AI services to analyze the text, providing sentiment analysis, entity analysis, and topic classification.
+
+# Features
+File Upload: Supports uploading plain text, HTML, and DOCX files.
+AI Analysis: Integrates with AI services to perform text analysis and summarization.
+Sentiment Analysis: Displays the sentiment score and magnitude.
+Topic Information: Shows topic classification and confidence.
+Keywords Extraction: Lists the keywords extracted from the text.
+
+# Technologies Used
+Frontend: Next.js, React.js, Tailwind CSS
+Backend: Node.js, Express.js
+AI Service: Google Cloud Natural Language API
+UI Components: Ant Design, Shadcn
+
+# Getting Started
+Prerequisites
+Node.js and npm installed on your machine.
+Google Cloud account with Natural Language API enabled.
+
+
+
+# Running the Application
+
+Start the frontend application:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser and navigate to http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Usage
+On the homepage, click the upload area or drag and drop a file to upload
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Select a plain text, HTML, or DOCX file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Click the "Upload and Summarize" button to start the analysis.
 
-## Learn More
+Once the analysis is complete, view the results in the respective tabs:
 
-To learn more about Next.js, take a look at the following resources:
+Keywords: Displays the extracted keywords.
+Sentiments: Shows the sentiment score and magnitude.
+Topic Information: Provides topic classification and confidence levels.
+Uploading Files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Image](./readmeImages/topss.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Supported Formats
+The application supports uploading the following file formats:
 
-## Deploy on Vercel
+Plain Text: .txt files
+HTML: .html files
+DOCX: .docx files
+Steps to Upload
+Click the upload area or drag and drop a file.
+Select a file from your device.
+Click the "Upload and Summarize" button to start the analysis.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Image](./readmeImages/fullss.png)
+
+# Folder Structure
+src/components: Contains reusable UI components like Tabs and Button.
+src/pages: Contains the main page components like HomePage.
+src/styles: Contains global styles and component-specific styles.
+UI Components
+The application uses Shadcn for some of its UI components. Shadcn is a set of customizable and accessible React components built with Tailwind CSS.
+
+Shadcn Components Used
+Tabs: For displaying different analysis results in tabbed sections.
+Button: For handling file upload and analysis actions.
