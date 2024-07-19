@@ -70,3 +70,4 @@ The application uses Shadcn for some of its UI components. Shadcn is a set of cu
 Shadcn Components Used
 Tabs: For displaying different analysis results in tabbed sections.
 Button: For handling file upload and analysis actions.
+
