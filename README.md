@@ -40,7 +40,7 @@ Sentiments: Shows the sentiment score and magnitude.
 Topic Information: Provides topic classification and confidence levels.
 Uploading Files
 
-![Image](./ReadmeImages/topss.png)
+![Image](./readmeImages/topss.png)
 
 # Supported Formats
 The application supports uploading the following file formats:
@@ -54,7 +54,7 @@ Select a file from your device.
 Click the "Upload and Summarize" button to start the analysis.
 
 
-![Image](./ReadmeImages/fullss.png)
+![Image](./readmeImages/fullss.png)
 
 # Folder Structure
 src/components: Contains reusable UI components like Tabs and Button.
